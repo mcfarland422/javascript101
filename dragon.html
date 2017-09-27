@@ -3,7 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Fight the horrible dragon</title>
+    <style media="screen">
+      body{
+        text-align: center;
+      }
+    </style>
     <script type="text/javascript">
+      function rollDice(){
+        // console.log("User pressed the roll button!");
+        get a random number between 1 and 6 for both dice.
+        var rand1 = Math.ceil(Math.random() * 6);
+        var rand2 = Math.ceil(Math.random() * 6);
+
+        // THe dice images are DN.gig We have 2 random numbers for that N.
+        // Use JS to update the DOM, so that image files that show, will be the Same
+        // number as the random numbers above.
+        var dice = document.getElementById('dice')
+        console.dir(dice);
+        var image1 = dice.children[0];
+        var image2 = dice.children[1];
+        image1.src = `dragon-assets/d${rand1}`
+      }
 
     </script>
   </head>
@@ -11,11 +31,20 @@
 
     <div id="game-wrapper">
       <div id="dragon">
-        <img src="./dragon/assets/dragon.png" alt="">
+        <img src="./dragon-assets/dragon.png" alt="">
 
       </div>
       <div id="message">
         You have encounted the great and terrible green dragon. Roll to fight.
+        You must roll an 8 or higher to defeat it.
+
+      </div>
+      <div id="dice">
+        <img src="./dragon-assets/d1.gif" alt="">
+        <img src="./dragon-assets/d1.gif" alt="">
+      </div>
+        <button>Fight!</button>
+      <div id="roll">
 
       </div>
 
