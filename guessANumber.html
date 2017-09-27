@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+var userNumber = prompt("Guess a number between 1-10.");
+
+/*  random number 0.19983899 x 10, ceil rounds number up so you have number between 1-10 */
+var rand = Math.ceil(Math.random() * 10);
+
+var difference = Math.abs(userNumber - rand);
+
+
+if(isNan(userNumber)){
+  alert("You must enter a number!");
+
+else if(userNumber == rand){
+  alert("Congrats! You answered correctly!")
+}
+else if(difference <= 2){
+  alert(`You were within 2! The number was ${rand}`)
+}
+
+else{
+  alert("Haha Sucker! Sorry dumby, the correct number was" + answer + "!")
+}
+
+
+</script>
