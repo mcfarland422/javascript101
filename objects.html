@@ -1,0 +1,51 @@
+<script>
+
+
+var students = [];
+
+
+var student = {}
+
+
+
+student.name = "Hayes";
+
+
+student.age = 28;
+console.log(student);
+
+// Can define multiple properties at definitition. Separate with a ,
+
+var student2 = {
+    name: "Jennifer",
+    profession: "Student",
+    language: "JavaScript"
+}
+
+console.log(student2.language);
+
+var student3 = {
+  name: "Akil",
+  friends: [
+    "Amir",
+    "Binh",
+    "Jong"
+  ]
+}
+
+var student4 = {
+  name: "Valerie",
+  sayHello: function(name){
+    console.log(`Hello, ${name}`)
+
+  },
+  addFriend: function(newFriendName){
+    this.friends.push(newFriendName)
+  }
+}
+
+
+
+
+
+</script>
