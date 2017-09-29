@@ -15,21 +15,16 @@ if (currentYear % 4 == 0){
 var j = 1;
 var previousNum = j;
 for (i = 0; i < 12; i++){
-  while(previousNum < monthArray[i]){
-  previousNum = j;
 	j = j + 7;
 	if (j == monthArray[i] + 1){
 		satOnFirsts++;
-    previousNum = monthArray[i] + 1;
-	}else if (j > monthArray[i] + 1){
+	}else{
 		j = 7 - (monthArray[i] - previousNum);
-    previousNum = previousNum + 7;
 	}
-console.log(monthArray[i],"", previousNum, "", i, "", j, "", y);
+console.log(j)
 }
 
 
 monthArray[1] = 28;
 }
-}
-console.log(`The number of Saturdays on the first of the month between 1701 and 1799 is ${satOnFirsts}`);
+console.log(`The number of Saturdays on the first of the month between 1701 and 1799 is ${satOnFirsts}`)
